@@ -39,12 +39,14 @@
 # It then uses this file in turn.
 
 LOCAL_PATH := $(call my-dir)
+
 include $(CLEAR_VARS)
 
 LOCAL_CFLAGS += -DANDROID_ARM=1
 LOCAL_CFLAGS +=-fstack-protector
+
 ifeq ($(DEBUG), 1)
-    LOCAL_CFLAGS += -D__DEBUG=1
+	LOCAL_CFLAGS += -D__DEBUG=1
 endif   
 
 LOCAL_SRC_FILES += commonwrapper.cpp
@@ -61,12 +63,12 @@ LOCAL_MODULE := libcommonpawrapper
 LOCAL_MODULE_TAGS := optional
 
 ifeq ($(ROOTPA_MODULE_TEST), 1)
-    LOCAL_STATIC_LIBRARIES += provisioningagent_test
-    LOCAL_STATIC_LIBRARIES += McStub    
+	LOCAL_STATIC_LIBRARIES += provisioningagent_test
+	LOCAL_STATIC_LIBRARIES += McStub    
 else
-    LOCAL_STATIC_LIBRARIES += provisioningagent
-    LOCAL_SHARED_LIBRARIES  += libMcClient
-    LOCAL_SHARED_LIBRARIES  += libMcRegistry
+	LOCAL_STATIC_LIBRARIES += provisioningagent
+	LOCAL_SHARED_LIBRARIES  += libMcClient
+	LOCAL_SHARED_LIBRARIES  += libMcRegistry
 endif
 
 #LOCAL_LDLIBS += -L$(SYSROOT)/usr/lib

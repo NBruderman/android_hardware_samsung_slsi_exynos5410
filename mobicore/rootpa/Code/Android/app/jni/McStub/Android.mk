@@ -34,13 +34,15 @@
 #
 
 ifeq ($(ROOTPA_MODULE_TEST), 1)
-    LOCAL_PATH := $(call my-dir)
+	LOCAL_PATH := $(call my-dir)
+
     include $(CLEAR_VARS)
 
     LOCAL_CFLAGS += -DANDROID_ARM=1
     LOCAL_CFLAGS += -DANDROID
 
     LOCAL_MODULE    := McStub
+
     LOCAL_SRC_FILES += ../../../../../Test/Common/mcStub/mcStub.c
 
     LOCAL_C_INCLUDES += $(MOBICORE_DIR_INC)

@@ -22,6 +22,6 @@ GLOBAL_INCLUDES := \
     $(COMP_PATH_TlCm)/Public/TlCm
 
 # Show all warnings
-APP_CFLAGS += -Wall
+#APP_CFLAGS += -Wall
 
 LOG_WRAPPER := $(COMP_PATH_Logwrapper)

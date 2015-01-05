@@ -10,6 +10,6 @@ PLATFORMS_PATH := $(LOCAL_PATH)/Daemon/Device/Platforms
 include $(PLATFORMS_PATH)/Generic/Android.mk
 
 ifneq ($(filter-out Generic,$(PLATFORM)),)
-  $(info PLATFORM: $(PLATFORM))
-  include $(PLATFORMS_PATH)/$(PLATFORM)/Android.mk
+	$(info PLATFORM: $(PLATFORM))
+	include $(PLATFORMS_PATH)/$(PLATFORM)/Android.mk
 endif

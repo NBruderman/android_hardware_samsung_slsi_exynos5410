@@ -37,13 +37,15 @@
 #
 
 LOCAL_PATH := $(call my-dir)
+
 include $(CLEAR_VARS)
 
 LOCAL_CFLAGS += -DANDROID_ARM=1
 LOCAL_CFLAGS += -DANDROID 
 LOCAL_CFLAGS +=-fstack-protector
+
 ifeq ($(DEBUG), 1)
-    LOCAL_CFLAGS += -D__DEBUG=1
+	LOCAL_CFLAGS += -D__DEBUG=1
 endif    
 
 LOCAL_SRC_FILES += ../../../../Common/commandhandler.c
@@ -68,10 +70,10 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../../../Common
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../../../Common/include
 
 ifeq ($(ROOTPA_MODULE_TEST), 1)
-    LOCAL_STATIC_LIBRARIES += McStub
-    LOCAL_MODULE := provisioningagent_test
+	LOCAL_STATIC_LIBRARIES += McStub
+	LOCAL_MODULE := provisioningagent_test
 else
-    LOCAL_MODULE := provisioningagent
+	LOCAL_MODULE := provisioningagent
 endif
 
 LOCAL_MODULE_TAGS := optional

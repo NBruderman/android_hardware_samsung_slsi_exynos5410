@@ -73,6 +73,7 @@ PLATFORM_DIR := $(TARGET_BOARD_PLATFORM)-insignal
 
 # HAL module implemenation stored in
 # hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.product.board>.so
+
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 
 LOCAL_C_INCLUDES += \
@@ -88,14 +89,14 @@ LOCAL_C_INCLUDES += \
 LOCAL_ADDITIONAL_DEPENDENCIES := \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
-LOCAL_SRC_FILES:= \
+LOCAL_SRC_FILES := \
 	ExynosCameraHWInterface.cpp
 
 LOCAL_CFLAGS += -DGAIA_FW_BETA
 LOCAL_CFLAGS += -DBACK_ROTATION=$(BOARD_BACK_CAMERA_ROTATION)
 LOCAL_CFLAGS += -DFRONT_ROTATION=$(BOARD_FRONT_CAMERA_ROTATION)
 
-LOCAL_SHARED_LIBRARIES:= libutils libcutils libbinder liblog libcamera_client libhardware
+LOCAL_SHARED_LIBRARIES := libutils libcutils libbinder liblog libcamera_client libhardware
 LOCAL_SHARED_LIBRARIES += libexynosutils libhwjpeg libexynosv4l2 libcsc libion libexynoscamera
 
 LOCAL_MODULE := camera.$(TARGET_BOOTLOADER_BOARD_NAME)

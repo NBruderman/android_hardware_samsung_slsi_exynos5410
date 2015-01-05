@@ -54,7 +54,9 @@ common_CFLAGS := -Wpointer-arith -Wwrite-strings -Wunused -Winline -Wnested-exte
 # Build the libcurl library
 
 include $(CLEAR_VARS)
+
 include $(LOCAL_PATH)/lib/Makefile.inc
+
 CURL_HEADERS := \
 	curlbuild.h \
 	curl.h \
@@ -67,10 +69,13 @@ CURL_HEADERS := \
 	typecheck-gcc.h
 
 LOCAL_SRC_FILES := $(addprefix lib/,$(CSOURCES))
+
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/include/
 LOCAL_C_INCLUDES += external/openssl/include
 LOCAL_C_INCLUDES += external/zlib
+
 LOCAL_CFLAGS += $(common_CFLAGS)
+
 LOCAL_SHARED_LIBRARIES := libz libssl libcrypto
 
 LOCAL_COPY_HEADERS_TO := libcurl/curl
@@ -88,6 +93,7 @@ LOCAL_MODULE_TAGS := optional
 #	$(copy-file-to-target)
 
 LOCAL_PRELINK_MODULE := false
+
 include $(BUILD_SHARED_LIBRARY)
 
 endif # USE_MOBICORE_CURL
