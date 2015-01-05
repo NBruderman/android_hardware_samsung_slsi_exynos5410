@@ -29,13 +29,11 @@
 # OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-
 #
 # makefile for building the MobiCore stub library
 #
 
 ifeq ($(ROOTPA_MODULE_TEST), 1)
-
     LOCAL_PATH := $(call my-dir)
     include $(CLEAR_VARS)
 

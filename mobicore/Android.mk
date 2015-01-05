@@ -9,7 +9,6 @@ LOG_WRAPPER := $(MOBICORE_PROJECT_PATH)/common/LogWrapper
 COMP_PATH_MobiCore := $(MOBICORE_PROJECT_PATH)/common/MobiCore
 COMP_PATH_MobiCoreDriverMod := $(MOBICORE_PROJECT_PATH)/include
 
-
 # Application wide Cflags
 GLOBAL_INCLUDES := bionic \
 	external/stlport/stlport \
@@ -32,7 +31,6 @@ SYSTEM_LIB_DIR=/system/lib
 GDM_PROVLIB_SHARED_LIBS=libMcClient
 # Include the provisioning lib
 include $(MOBICORE_PROJECT_PATH)/provlib/Android.mk
-
 
 MOBICORE_DIR_INC := $(MC_INCLUDE_DIR) $(MOBICORE_PROJECT_PATH)/common/curl/include
 include $(MOBICORE_PROJECT_PATH)/common/curl/Android.mk

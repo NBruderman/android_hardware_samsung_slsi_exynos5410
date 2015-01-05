@@ -29,7 +29,6 @@
 # OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-
 #
 # makefile for building the provisioning agent Common part and the jni wrapper 
 # for android. Build the components by executing 

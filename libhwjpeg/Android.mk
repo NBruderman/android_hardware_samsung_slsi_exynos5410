@@ -25,7 +25,7 @@ LOCAL_C_INCLUDES := \
 	$(TOP)/hardware/samsung_slsi/exynos/libexynosutils \
 	$(TOP)/hardware/samsung_slsi/exynos/include
 
-LOCAL_ADDITIONAL_DEPENDENCIES += \
+LOCAL_ADDITIONAL_DEPENDENCIES := \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_SRC_FILES := \

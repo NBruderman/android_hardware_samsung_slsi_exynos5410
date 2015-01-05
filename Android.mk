@@ -15,6 +15,7 @@
 #
 
 ifeq ($(TARGET_SOC),exynos5410)
+
 ifeq ($(TARGET_SLSI_VARIANT),insignal)
 
 exynos5410_dirs := \
@@ -22,10 +23,11 @@ exynos5410_dirs := \
 	mobicore
 
 ifeq ($(BOARD_USE_SOC_LIBCAMERA),true)
-exynos5410_dirs += libcamera
+	exynos5410_dirs += libcamera
 endif
 
 include $(call all-named-subdir-makefiles,$(exynos5410_dirs))
 
 endif
+
 endif

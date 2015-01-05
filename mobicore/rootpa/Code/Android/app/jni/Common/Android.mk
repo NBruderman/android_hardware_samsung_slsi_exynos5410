@@ -29,15 +29,12 @@
 # OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-
 #
 # makefile for building the provisioning agent Common part for android. build the code by executing 
 # $NDK_ROOT/ndk-build in the folder where this file resides
 #
 # naturally the right way to build is to use build script under Build folder. It then uses this file.
 #
-
-
 
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
@@ -60,21 +57,21 @@ LOCAL_SRC_FILES += ../../../../Common/xmlmessagehandler.c
 LOCAL_SRC_FILES += ../../../../Common/provisioningengine.c
 LOCAL_SRC_FILES += ../../../../Common/contentmanager.c
 
-LOCAL_C_INCLUDES +=  $(MOBICORE_DIR_INC)
-LOCAL_C_INCLUDES +=  $(MOBICORE_DIR_INC)/TlCm
-LOCAL_C_INCLUDES +=  $(MOBICOREDRIVER_DIR_INC)
-LOCAL_C_INCLUDES +=  $(MOBICOREDRIVER_DIR_INC2)
-LOCAL_C_INCLUDES +=  external/curl/include
-LOCAL_C_INCLUDES +=  external/libxml2/include
-LOCAL_C_INCLUDES +=  external/icu4c/common
-LOCAL_C_INCLUDES +=  $(LOCAL_PATH)/../../../../Common
-LOCAL_C_INCLUDES +=  $(LOCAL_PATH)/../../../../Common/include
+LOCAL_C_INCLUDES += $(MOBICORE_DIR_INC)
+LOCAL_C_INCLUDES += $(MOBICORE_DIR_INC)/TlCm
+LOCAL_C_INCLUDES += $(MOBICOREDRIVER_DIR_INC)
+LOCAL_C_INCLUDES += $(MOBICOREDRIVER_DIR_INC2)
+LOCAL_C_INCLUDES += external/curl/include
+LOCAL_C_INCLUDES += external/libxml2/include
+LOCAL_C_INCLUDES += external/icu4c/common
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../../../Common
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../../../Common/include
 
 ifeq ($(ROOTPA_MODULE_TEST), 1)
-    LOCAL_STATIC_LIBRARIES +=  McStub
-    LOCAL_MODULE    := provisioningagent_test
+    LOCAL_STATIC_LIBRARIES += McStub
+    LOCAL_MODULE := provisioningagent_test
 else
-    LOCAL_MODULE    := provisioningagent
+    LOCAL_MODULE := provisioningagent
 endif
 
 LOCAL_MODULE_TAGS := optional

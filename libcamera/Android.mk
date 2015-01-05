@@ -49,7 +49,7 @@ LOCAL_C_INCLUDES += \
 LOCAL_ADDITIONAL_DEPENDENCIES := \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
-LOCAL_SRC_FILES:= \
+LOCAL_SRC_FILES := \
 	ExynosCameraActivityBase.cpp \
 	ExynosCameraActivityFlash.cpp \
 	ExynosCameraActivityAutofocus.cpp \
