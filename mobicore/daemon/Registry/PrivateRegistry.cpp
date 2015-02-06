@@ -112,7 +112,7 @@ static string getRegistryPath()
     const char *path;
     string registryPath;
 
-    // First, attempt to use regular registry environment variable.
+    /* First, attempt to use regular registry environment variable.
     path = getenv(ENV_MC_REGISTRY_PATH.c_str());
     if (doesDirExist(path)) {
         LOG_I("getRegistryPath(): Using MC_REGISTRY_PATH %s", path);
@@ -124,8 +124,8 @@ static string getRegistryPath()
             LOG_I("getRegistryPath(): Using MC_REGISTRY_FALLBACK_PATH %s", path);
             registryPath = path;
         }
-    }
-
+    } */
+    
     // As a last resort, use the default registry path.
     if (registryPath.length() == 0) {
         registryPath = MC_REGISTRY_DEFAULT_PATH;
